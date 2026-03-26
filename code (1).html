@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GUBBARE | Premium Fashion Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-highest": "#dde4e5",
+                        "inverse-surface": "#0c0f0f",
+                        "on-surface": "#2d3435",
+                        "secondary-fixed-dim": "#d4d4d4",
+                        "secondary-container": "#e2e2e2",
+                        "on-background": "#2d3435",
+                        "error-container": "#fe8983",
+                        "on-error-container": "#752121",
+                        "inverse-primary": "#ffffff",
+                        "on-secondary-fixed": "#3e4040",
+                        "on-primary-container": "#525151",
+                        "on-primary-fixed": "#403f3f",
+                        "primary-fixed": "#e5e2e1",
+                        "inverse-on-surface": "#9c9d9d",
+                        "tertiary-dim": "#525354",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-fixed": "#484a4a",
+                        "primary": "#5f5e5e",
+                        "secondary": "#5e5f5f",
+                        "surface-container": "#ebeeef",
+                        "tertiary-container": "#f3f3f3",
+                        "tertiary-fixed": "#f3f3f3",
+                        "on-tertiary-container": "#5a5c5c",
+                        "error": "#9f403d",
+                        "surface-tint": "#5f5e5e",
+                        "on-secondary": "#f9f9f9",
+                        "outline": "#757c7d",
+                        "on-primary": "#faf7f6",
+                        "on-surface-variant": "#596061",
+                        "on-error": "#fff7f6",
+                        "surface": "#f9f9f9",
+                        "primary-fixed-dim": "#d6d4d3",
+                        "tertiary": "#5e5f60",
+                        "on-primary-fixed-variant": "#5c5b5b",
+                        "on-tertiary-fixed-variant": "#656667",
+                        "primary-dim": "#535252",
+                        "outline-variant": "#acb3b4",
+                        "surface-variant": "#dde4e5",
+                        "surface-container-high": "#e4e9ea",
+                        "secondary-fixed": "#e2e2e2",
+                        "error-dim": "#4e0309",
+                        "secondary-dim": "#525354",
+                        "surface-container-low": "#f2f4f4",
+                        "on-secondary-fixed-variant": "#5a5c5c",
+                        "tertiary-fixed-dim": "#e5e5e5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#d3dbdd",
+                        "on-tertiary": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "primary-container": "#e5e2e1",
+                        "on-secondary-container": "#505252"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass-nav { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); }
+        .product-card:hover .product-image { transform: scale(1.05); }
+        .editorial-shadow { box-shadow: 0 20px 40px 0 rgba(45, 52, 53, 0.05); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-neutral-900/70 backdrop-blur-xl flex justify-between items-center w-full px-8 py-6 max-w-full mx-auto transition-all duration-500 ease-in-out">
+<div class="flex items-center gap-12">
+<a class="text-2xl font-bold tracking-tighter text-neutral-900 dark:text-white uppercase" href="#">GUBBARE</a>
+<div class="hidden md:flex gap-8 font-inter tracking-tight text-sm font-medium uppercase">
+<a class="text-neutral-900 dark:text-white border-b border-neutral-900 dark:border-white pb-1" href="#">Collections</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors" href="#">New Arrivals</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors" href="#">Archive</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors" href="#">Atelier</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="hover:opacity-70 transition-opacity duration-300 relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-[8px] text-white w-3 h-3 flex items-center justify-center rounded-full">2</span>
+</button>
+</div>
+</nav>
+<main class="pt-0">
+<!-- Hero Section -->
+<section class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+<img alt="High-end editorial fashion" class="absolute inset-0 w-full h-screen object-cover scale-105" data-alt="Editorial fashion photograph of a model in minimalist structured beige tailoring against a soft cream architectural background with dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg_eIifISTMfD0gz7N7Gr09AMVEhMOQ_euowAqmKQBQWobNEaD_6uRk0Hu45priGBUOIOYZ3fN9kUkEjypCh6Y5awN6ZU5VkypNEh95jBM0FFwOm7Af9PNwAjwyE5XKUi7_3trBTeWU6wR-z3GKR64nJo7Q3eLhMK-aHdAMMrEun-6W13ic3Bug1G7BWtDv71g0L-YuS0FgCWPkKAh7kPlzAtpcHvrFQ4vq7LdSmc-YuQqeoIvf1_W_ndRmzi72W0y2swYzrnhKHsC"/>
+<div class="absolute inset-0 bg-neutral-900/10"></div>
+<div class="relative z-10 text-center flex flex-col items-center">
+<span class="text-white text-xs tracking-[0.4em] uppercase mb-6 block font-medium opacity-90">Autumn Winter 2024</span>
+<h1 class="text-white text-6xl md:text-9xl font-extrabold tracking-tighter leading-none mb-10">THE NEW<br/>ARCHIVE</h1>
+<a class="bg-primary hover:bg-primary-dim text-on-primary px-12 py-4 text-xs font-bold uppercase tracking-widest transition-all duration-300 rounded-none" href="#">Explore Collection</a>
+</div>
+</section>
+<!-- New Collection Grid -->
+<section class="py-24 px-8 md:px-20 bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16">
+<div>
+<span class="text-[10px] tracking-[0.3em] uppercase text-outline-variant font-bold">Latest Drops</span>
+<h2 class="text-4xl font-light tracking-tight mt-2 text-on-surface uppercase">New Collection</h2>
+</div>
+<a class="text-[10px] font-bold uppercase tracking-widest border-b border-on-surface pb-1 mb-1" href="#">View All Arrivals</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-6">
+<img alt="Structured Wool Coat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close-up detail of a structured ivory wool coat with clean lines and premium fabric texture against a neutral studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVZkCd2OzD6lRNODS0ty_lqC8gb7fFxjcvWB92n2XE1QmlY4wrd6ZEHqu7BfMyaBkURw9fJHuwM9lNsFkteWFCvKWmHlELxtYg8Q6ffBN-iO6O9YArIZZeYwT-m8Kdr-ejWvss_F1HC39vFYD9tb_0_b1wGNijqRozONd8-frysc5tKHrGpVhoyCepwt7NjCpZTr19LtcWShEN49Lgn1Xqx3Fm1VSSmfBqqZG4aKRtaCy-GkigKylszgNj4Uod1xMHnPGKyKtbw1Tg"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xs font-medium uppercase tracking-tight text-on-surface">Structured Wool Coat</h3>
+<p class="text-[10px] text-outline-variant uppercase mt-1">Ivory White</p>
+</div>
+<span class="text-xs font-semibold">$890</span>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer mt-12">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-6">
+<img alt="Pleated Silk Trousers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Flowing pleated silk trousers in a soft beige tone styled with minimalist leather accessories in a bright studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9YQhbGR3W_mTIV4DibI9vtApaKxHPd7t7gS5UZFdBKtTAB7h9GsGe7BM-FhqeeMtr_ELxFG4LTHw2oNUuqreJxHVhfUgAW_SOODchZYBZR7jdzLiHBr6Kg0LmJZ5cyymBvPxPQcx9cUxBkyNGivXw23dvY_w-iCfPnZjzeuaB3QXQCgvq6_X-ek5NAcstqevNY_NomS0rCIam5_f8mQEFErtMfG5BU2WG3RhcJ4CEn5VznhqP9atF7VlzliM3L1ntSeoH8stvJLXk"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xs font-medium uppercase tracking-tight text-on-surface">Pleated Silk Trousers</h3>
+<p class="text-[10px] text-outline-variant uppercase mt-1">Oatmeal</p>
+</div>
+<span class="text-xs font-semibold">$450</span>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-6">
+<img alt="Asymmetric Knit Top" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Sleek asymmetric knit top in charcoal black with fine ribbing detail worn by a model in soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBouVyWkOujqIkQOgleE7JloQKOLXM-hjuJdrCfLH4gDEnQa9rVja-4IFnh0Pf5D8cWPAb1cZOX_l7UR59ppg7GhZW8AlDOvy0rFPBf--S0HSioDaM3nXnmPTxvmj_lzxPqnmvWUMKgNrpW_5xueo6Dg16ggLi4YdndbSFzHxblTM-dxQxowPJO0nJjWNj_sALJ3WA0IH_5mYNlXpSikfPhsSqQpj4vtgtKfSvxvgu8wGUxj-He5E4pSSpYW7qbRLyfn1Slr6xKnue"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xs font-medium uppercase tracking-tight text-on-surface">Asymmetric Knit Top</h3>
+<p class="text-[10px] text-outline-variant uppercase mt-1">Noir</p>
+</div>
+<span class="text-xs font-semibold">$320</span>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group cursor-pointer mt-12">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-6">
+<img alt="Cashmere Wrap Scarf" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Luxurious oversized cashmere wrap scarf in camel beige draped over a minimalist lounge chair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPhtOSrdCn2sKdSlpTJtBRkRFq7CKQKVM23XqPbvrdCoSm9V0GKhgbaQbGDDEQnsL4Hqlk0vpu07VfdppKzj191FzCgEMd4JkrOdiLm0vrqTODsQQDcITt1TbaeVNmMvFzoZCfMERb-o-ANaLa3DMfBvYQM4tj_OCAsb_Z2JFPF1etEQWDH_ymiG9uwQ2-Aof2eTu_xnE9MnOT-4MVAdmjF1ZVlQcykx-Vg9C-GimA3SkPXHzpRB1Vnkxc8fk9utOhjE1wREYRwnf5"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xs font-medium uppercase tracking-tight text-on-surface">Cashmere Wrap Scarf</h3>
+<p class="text-[10px] text-outline-variant uppercase mt-1">Camel</p>
+</div>
+<span class="text-xs font-semibold">$240</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Asymmetric Layout -->
+<section class="py-24 px-8 md:px-20 grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+<div class="md:col-span-7 group relative overflow-hidden h-[600px] flex items-end p-12">
+<img alt="Men's Collection" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Editorial portrait of a man in high-end tailored black suit standing in an industrial loft with warm afternoon light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRKKcpXUoW5sdjqyu9h6isbr5HSnzim7K6gJBXwCQ4o1v0ECF7XS0pv2qIC0bGcd2SaYmmFZ_6a9PklJ_WaSl8jWyQIClEcGeUvcFlHOiotLEZGZkGRwkqUchcTactkzWhDL1EnqC6ElyGG1HcS_E-hCO-cKty_0JDua07lYwSQYzFVJnL_EjSYfRT980AYiIxNjiMlNPZ5A_5HtHA2A5YJTxMHdCVmzZYcxGbKxGtSaJCmxn_eYBvSVgp0PZb_qtiXybVnvGqU_KT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-neutral-900/60 to-transparent"></div>
+<div class="relative z-10 text-white">
+<h3 class="text-4xl font-bold tracking-tighter uppercase mb-4">GUBBARE HOMME</h3>
+<p class="text-xs tracking-widest uppercase mb-8 max-w-xs font-light">Refined tailoring and contemporary essentials for the modern man.</p>
+<a class="inline-block border border-white px-8 py-3 text-[10px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-neutral-900 transition-colors" href="#">Explore Men</a>
+</div>
+</div>
+<div class="md:col-span-5 flex flex-col gap-8">
+<div class="group relative overflow-hidden h-1/2 flex items-end p-8">
+<img alt="Accessories" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Close up of luxury leather handbags and minimalist gold jewelry arranged on a stone plinth in a gallery setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp3KYwLuoy2R-CAmwnR_nemRcB7zBaCBV93AgexaIMt_rxGyEi84SWTS_fjPY9iBedRMsNDFnpUSsSvJFIh1UNo2QKOAZNeaVmHUwD0s0Lzc5EWlTw2niViWZcNIqwByrbFoxUYKvbgsN_OPJTm52kILYqVnDGc4nAZXMb6O9WIaimrV7Uo-622SXfsdd7tt19Ua81QVsN1Pxy7Az-xaglnxZz-zgdaF3aU4ccuoGJ36XqVUcMPh1-EkQ5V0ZatmEjRAyzG6lVNSGi"/>
+<div class="absolute inset-0 bg-gradient-to-t from-neutral-900/40 to-transparent"></div>
+<div class="relative z-10 text-white">
+<h3 class="text-2xl font-bold tracking-tighter uppercase mb-2">ACCESSORIES</h3>
+<a class="text-[10px] font-bold uppercase tracking-widest border-b border-white pb-1" href="#">Shop The Details</a>
+</div>
+</div>
+<div class="group relative overflow-hidden h-1/2 flex items-end p-8">
+<img alt="Women's Collection" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Fashion model wearing a minimalist silk slip dress in black, walking through a grand sunlit hallway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY_0QJcrmtYYhqiXRUcLtrnqvA1MoYzFsv1pPP2wigOjJ-bCazNa8ZEJ6uonoj4ys5RXLRDdcqsHL-5_3m40wCJQUWq90U8VDcQ6s8-X6rk1CeX9D27MD3rffj02iLkJ8YiZ6y58PcDYg9rybTRXQUrdVBJ2-JgwP0iqll_--lRsiqIv1zW5flw3fXiEthkp1OG7DQtrRDbrjMyFc1a_PQ-Q9nmjDGj-aqAspQC9oR2Nc2wpIbCFksbEu9qViOYtPwn9QY9G6ke8FX"/>
+<div class="absolute inset-0 bg-gradient-to-t from-neutral-900/40 to-transparent"></div>
+<div class="relative z-10 text-white">
+<h3 class="text-2xl font-bold tracking-tighter uppercase mb-2">GUBBARE FEMME</h3>
+<a class="text-[10px] font-bold uppercase tracking-widest border-b border-white pb-1" href="#">Discover Women</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Best Sellers (Tonal Shift) -->
+<section class="py-24 px-8 md:px-20 bg-surface-container-low">
+<div class="text-center mb-16">
+<span class="text-[10px] tracking-[0.4em] uppercase text-outline font-bold">The Icons</span>
+<h2 class="text-5xl font-extrabold tracking-tighter mt-4 text-on-surface uppercase">Best Sellers</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-white mb-6">
+<img alt="Leather Chelsea Boots" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-125" data-alt="Minimalist black leather Chelsea boots isolated against a clean white and beige background with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANSTJReuJwi5yDitaJsmYOEIiK-aXL0TtaDu635qp7airWij2UfcuvHyqvtMMcb3urFtHoHF3BEXbVjnTS2ZIJ6fckuL9uddpYWV58nLPK06_BI6-drDA9YoCuZewKeGLKm3s6a7LtvR1hY7N0vClbhTLZYIhkLMeVOjrmD5AdQfQf8LlQKrjbYbnLBNkIOXPfAy2_yfAL3zU-YDbjubs1yJ7ZT9A-Ms3oGMzU0WrrArqdvakYwSgX37W_45xHCHTUG2WY7ezy6HXM"/>
+</div>
+<div class="text-center">
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-on-surface">The Atelier Boot</h4>
+<p class="text-[10px] text-outline mt-1 font-medium">$550</p>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-white mb-6">
+<img alt="Oversized Blazer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-125" data-alt="A perfectly tailored oversized linen blazer in a soft taupe color draped elegantly on a mannequin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBz3kakhwcBtg1gdrJK_LOU5z2DRwaqInwkuU8ynOZck5uPGaHbID27api2MQeFfvA-9Y_wWjmttJwEyt3IlGahF9H817uNk13OgHqcXge4RtRlPwi5AYGnI2hnJjFQEVfsQrAYslDxYp7UnOXFQr5z6uLg3Hd9cBSnBfFIb5ueHhuS8s6fVVkidZUwoAayTFkdXa2b7jI_3xfVn7rHRPNrmf0o-98C0I7Jdqj-DJvF2CjQnnOhrekIdDWdn-WJpQZGqNisdf5LT-oO"/>
+</div>
+<div class="text-center">
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-on-surface">Double Breasted Blazer</h4>
+<p class="text-[10px] text-outline mt-1 font-medium">$680</p>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-white mb-6">
+<img alt="Silk Scarf" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-125" data-alt="Fine Italian silk scarf with a minimalist geometric pattern in black and beige tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbF_LVrC1Ny_LedzusiYQ1ryaGar8RMnHf5gyZvKfhDiYdZc_xBUsHDEuOk_dV8Ly5XtzCJ_DzXyUgI8P2dj0D7d8G9d4ux3exZhXGH0BlEqhU5YLnmKKeNhDn6UaUnMVyxxyAxkzm2hG9PvJaJL_AsTeYPK9PB1Ci1YLQQpMa31D537BC7OACg9rFhgmlUVDOeFkpJtARgNhA9xZo1uovkZ9NtP9ksepRilC70pmbivblzGBpVHRP2Sx5uI2X6BlWRxVzELhM3Sv6"/>
+</div>
+<div class="text-center">
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-on-surface">Monogram Silk Scarf</h4>
+<p class="text-[10px] text-outline mt-1 font-medium">$190</p>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square overflow-hidden bg-white mb-6">
+<img alt="White Tee" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-125" data-alt="Essential heavyweight cotton white t-shirt with a premium matte finish and perfect drape" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1p3Bgr1C7Qna7Eep7BQTSwbTXB7NpNoh2nZTUwmJyVaB4Tk4NlJKnMrklEgJzDnvkqCJJrjis9j0oqhGhW7znUVI21aC9BN1eF9Ae8uqPZP5EeS38M5TwtMUOK9lBM4rGXKS3_ycJXhTnLqWowKHjqdNklBipKOj-GlvVNsSmKEH3sLIuRVjaNzp_W9YeB7zT5ILghmVMN-ZC8JJr6H-HlXhVmdpDSjbkNcIVCFTTCTqgmE7yuGhgr5sELl7w193NUIzsGmbyY-kY"/>
+</div>
+<div class="text-center">
+<h4 class="text-[10px] font-bold uppercase tracking-widest text-on-surface">The Essential Tee</h4>
+<p class="text-[10px] text-outline mt-1 font-medium">$95</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-50 dark:bg-neutral-950 w-full border-t border-neutral-200 dark:border-neutral-800 flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 gap-8">
+<div class="flex flex-col gap-6 items-center md:items-start">
+<span class="text-xl font-black tracking-tighter uppercase">GUBBARE</span>
+<p class="font-inter text-xs tracking-widest uppercase text-neutral-500 max-w-xs text-center md:text-left leading-relaxed">Defining the intersection of architectural structure and contemporary ease.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-12 font-inter text-xs tracking-widest uppercase">
+<div class="flex flex-col gap-4">
+<span class="text-neutral-900 dark:text-white font-bold mb-2">Service</span>
+<a class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white hover:tracking-[0.2em] transition-all duration-500" href="#">Shipping</a>
+<a class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white hover:tracking-[0.2em] transition-all duration-500" href="#">Returns</a>
+<a class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white hover:tracking-[0.2em] transition-all duration-500" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-neutral-900 dark:text-white font-bold mb-2">Legal</span>
+<a class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white hover:tracking-[0.2em] transition-all duration-500" href="#">Sustainability</a>
+<a class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white hover:tracking-[0.2em] transition-all duration-500" href="#">Privacy</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-neutral-900 dark:text-white font-bold mb-2">Connect</span>
+<a class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white hover:tracking-[0.2em] transition-all duration-500" href="#">Instagram</a>
+<a class="text-neutral-500 hover:text-neutral-900 dark:hover:text-white hover:tracking-[0.2em] transition-all duration-500" href="#">TikTok</a>
+</div>
+</div>
+<div class="text-neutral-500 text-[10px] tracking-widest">
+            © 2024 GUBBARE ATELIER. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+<!-- Bottom Nav (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-6 pb-8 pt-4 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-2xl border-t border-neutral-100/20 dark:border-neutral-800/20 shadow-[0_-10px_30px_rgba(0,0,0,0.03)] md:hidden z-50">
+<a class="flex flex-col items-center justify-center text-neutral-900 dark:text-white scale-110" href="#">
+<span class="material-symbols-outlined">line_style</span>
+<span class="font-inter text-[8px] tracking-widest uppercase mt-1">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-500" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-inter text-[8px] tracking-widest uppercase mt-1">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-500" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-inter text-[8px] tracking-widest uppercase mt-1">Bag</span>
+</a>
+<a class="flex flex-col items-center justify-center text-neutral-400 dark:text-neutral-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-inter text-[8px] tracking-widest uppercase mt-1">Profile</span>
+</a>
+</nav>
+<!-- Modal Popup -->
+<div class="fixed inset-0 z-[100] flex items-center justify-center bg-on-surface/40 backdrop-blur-sm p-4" id="offer-modal">
+<div class="bg-surface max-w-2xl w-full flex flex-col md:flex-row editorial-shadow relative overflow-hidden">
+<button class="absolute top-4 right-4 z-20 text-on-surface hover:opacity-50 transition-opacity" onclick="document.getElementById('offer-modal').style.display='none'">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="w-full md:w-1/2 h-48 md:h-auto">
+<img alt="Offer Model" class="w-full h-full object-cover" data-alt="Close up of a luxury fabric texture and a hand holding a gold garment tag in warm soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyWkgYvn2_kcj_q5hUVvxalYTSKXIR-GFwWzV2rVRVSC6OQdqU7bHXI3jTitgiVvttGnFQRtdTuW6bdFkK7Lk8GuDlrqw55YTdL1C2zjUymMeeBNYZAEizI4lOLwbOjmig_k3I-RdNClOUoQIdroTesLZfaEvJCXNnMdCbARJusu6xvIU5Q-nFD48Q3VelSiUHfC4G-dGCTRcDr9xztvGz10WVuulCAbYMWLWa6WgBoxxHfKnasxuES1hNjjAlL_pPxwIgsXrO-rz7"/>
+</div>
+<div class="w-full md:w-1/2 p-10 flex flex-col justify-center text-center md:text-left bg-surface-container-lowest">
+<span class="text-[10px] tracking-[0.4em] uppercase text-outline mb-4 block font-bold">Limited Invitation</span>
+<h3 class="text-3xl font-extrabold tracking-tighter uppercase mb-2">Get 15% OFF</h3>
+<p class="text-xs text-on-surface-variant font-medium uppercase tracking-widest leading-relaxed mb-8">Join our inner circle for early access and a welcome gift on your first atelier order.</p>
+<form action="#" class="flex flex-col gap-4">
+<input class="bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 text-[10px] tracking-widest uppercase py-3 px-0 placeholder:text-outline-variant transition-all outline-none" placeholder="YOUR EMAIL ADDRESS" type="email"/>
+<button class="bg-primary hover:bg-primary-dim text-on-primary py-4 text-[10px] font-bold uppercase tracking-[0.2em] transition-all" type="submit">Claim Offer</button>
+</form>
+<button class="mt-6 text-[8px] tracking-widest text-outline-variant uppercase hover:text-on-surface transition-colors" onclick="document.getElementById('offer-modal').style.display='none'">No thanks, I'll pay full price</button>
+</div>
+</div>
+</div>
+</body></html>
